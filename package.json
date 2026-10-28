@@ -1,0 +1,30 @@
+{
+  "name": "mobilewright-workshop",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bignited hands-on workshop: mobile test automation with Mobilewright",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "setup:apps": "node scripts/download-apps.mjs",
+    "doctor": "mobilewright doctor",
+    "devices": "mobilewright devices",
+    "inspect": "mobilewright inspect",
+    "codegen": "mobilewright codegen",
+    "test": "mobilewright test",
+    "test:ios": "mobilewright test --project=ios",
+    "test:android": "mobilewright test --project=android",
+    "test:smoke": "mobilewright test tests/00-smoke",
+    "solutions:ios": "mobilewright test -c mobilewright.solutions.config.ts --project=ios",
+    "solutions:android": "mobilewright test -c mobilewright.solutions.config.ts --project=android",
+    "report": "mobilewright show-report"
+  },
+  "devDependencies": {
+    "@mobilewright/test": "0.0.67",
+    "@types/node": "^26.6.5",
+    "mobilewright": "0.0.67",
+    "typescript": "^7.0.2"
+  }
+}

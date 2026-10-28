@@ -1,6 +1,6 @@
 # Mobilewright workshop: mobile test automation for QA engineers
 
-A 6-hour hands-on workshop on [Mobilewright](https://mobilewright.dev): Playwright-style test automation for iOS and Android apps, on simulators, emulators and real devices.
+A hands-on workshop on [Mobilewright](https://mobilewright.dev): Playwright-style test automation for iOS and Android apps, on simulators, emulators and real devices.
 
 ## Before the workshop: setup
 
@@ -16,39 +16,17 @@ npx mobilewright install -d <DEVICE-ID>
 npm run test:smoke -- --project=ios        # or --project=android
 ```
 
-Full instructions, including Windows and Android: **[docs/attendee-setup.md](docs/attendee-setup.md)**
-
-## During the workshop: `git pull` when the trainer says so
-
-New exercises, docs and the solutions of the previous module are released step by step.
-When the trainer announces a new step:
-
-```bash
-git pull
-```
-
-A step only **adds new files**, so your work in progress is safe, even if you haven't committed it.
-(Want to keep your own history? `git add -A && git commit -m "my work"` before pulling.)
-
-| Step | Arrives | You get |
-|---|---|---|
-| 0 | Before the workshop | Project setup, smoke test, setup guide, agenda |
-| 1 | Inspector & first test | Exercise 01, cheat sheet |
-| 2 | Real test flows | Exercises 02–03, solution 01 |
-| 3 | Gestures & device | Exercises 04–05, solutions 02–03 |
-| 4 | Test architecture | Exercise 06, solutions 04–05, gotchas |
-| 5 | AI agents | AI module, solution 06 |
-| 6 | Challenge hour 🏆 | Challenge board, Teams challenge starter |
+Full instructions, including Windows and Android: **[docs/setup.md](docs/Setup.md)**
 
 ## Project layout
 
-| Path | What |
-|---|---|
-| `tests/` | Exercise files with `TODO`s: you work here |
-| `solutions/` | Reference solutions, one module behind (`npm run solutions:ios` / `solutions:android`) |
-| `support/` | Shared helpers: cross-platform locators, app ids |
-| `docs/` | Setup guide, agenda, and later the cheat sheet, gotchas and AI module |
-| `mobilewright.config.ts` | Two projects, `ios` and `android`: every test runs on both |
+| Path                     | What                                                                                   |
+| ------------------------ | -------------------------------------------------------------------------------------- |
+| `tests/`                 | Exercise files with `TODO`s: you work here                                             |
+| `solutions/`             | Reference solutions, one module behind (`npm run solutions:ios` / `solutions:android`) |
+| `support/`               | Shared helpers: cross-platform locators, app ids                                       |
+| `docs/`                  | Setup guide, agenda, and later the cheat sheet, gotchas and AI module                  |
+| `mobilewright.config.ts` | Two projects, `ios` and `android`: every test runs on both                             |
 
 ## The app under test
 
@@ -57,11 +35,11 @@ Bundle ids: `org.wdiodemoapp` (iOS), `com.wdiodemoapp` (Android). The iOS simula
 
 ## Useful scripts
 
-| Script | Does |
-|---|---|
-| `npm run doctor` | Check the machine's setup |
-| `npm run devices` | List simulators/emulators/phones |
-| `npm run inspect` | Live element inspector in the browser |
-| `npm run codegen` | Record taps → test code |
-| `npm run test:ios -- tests/02` | Run one exercise on one platform |
-| `npm run report` | Open the last HTML report |
+| Script                         | Does                                  |
+| ------------------------------ | ------------------------------------- |
+| `npm run doctor`               | Check the machine's setup             |
+| `npm run devices`              | List simulators/emulators/phones      |
+| `npm run inspect`              | Live element inspector in the browser |
+| `npm run codegen`              | Record taps → test code               |
+| `npm run test:ios -- tests/02` | Run one exercise on one platform      |
+| `npm run report`               | Open the last HTML report             |
